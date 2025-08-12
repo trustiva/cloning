@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-squarespace-black text-squarespace-white font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-squarespace-white text-squarespace-black px-6 py-3 font-semibold uppercase tracking-wide hover:bg-squarespace-gray-100 transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply border border-squarespace-white text-squarespace-white px-6 py-3 font-semibold uppercase tracking-wide hover:bg-squarespace-white hover:text-squarespace-black transition-all duration-200;
+  }
+  
+  .btn-ghost {
+    @apply text-squarespace-white hover:text-squarespace-gray-200 transition-colors duration-200;
+  }
+  
+  .nav-link {
+    @apply text-squarespace-white hover:text-squarespace-gray-200 transition-colors duration-200 cursor-pointer;
+  }
+  
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-squarespace-orange-400 to-squarespace-red-500 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/10 border border-white/20;
+  }
+  
+  .shadow-soft {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-strong {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+}
